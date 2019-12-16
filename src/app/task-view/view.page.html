@@ -1,0 +1,25 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Task View</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-card>
+  <ion-card-content>
+    <ion-card-title>
+      {{task.content}}
+    </ion-card-title>
+    <div class="task-date">{{ task.date }}</div>
+    <hr />
+    <div>{{ task.content }}</div>
+  
+  </ion-card-content>
+</ion-card>
+
+<ion-footer>
+<button ion-button color="danger" block (click)="deleteTask(Task.createDate)">Delete Task</button>
+</ion-footer>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      My ToDo App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="Add Task | async" (click)="getTask(task.createDate)">
+      {{ Task.title }}
+    </button>
+  </ion-list>
+  <button ion-button (click)= "addTask()" icon-start large roond color="dark">Add Task</button> 
+  
+</ion-content>
