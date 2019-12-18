@@ -16,7 +16,7 @@ export class HomePage {
   private tasks: Promise<Task[]>; 
   private task: Task;
 
-  constructor(public navCtrl: NavController, private noteService: TaskService) {
+  constructor(public navCtrl: NavController, private taskService: TaskService) {
 
   }
 
@@ -26,16 +26,10 @@ export class HomePage {
 
 
   addTask(){
-    this.navCtrl.push(AddTaskPage);
+    
 
   }
-  getTask(createDate: number){
-    this.noteService.getTask(createDate).then((n) =>{
-      this.task = n;
-      this.navCtrl.push(TaskViewPage, { task: this.task })
-    })
-
-  }
+  
   
 getAllTasks(){
   return this.taskService.getAllTasks();
