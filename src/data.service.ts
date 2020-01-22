@@ -27,7 +27,7 @@ private task: Task;
       }
     )
   }
-  s
+  
   getTask(createDate: number){
     return this.storage.get('tasks').then((tasks) => {
   this.task= [...this.tasks].find(r => r.createDate === createDate)
