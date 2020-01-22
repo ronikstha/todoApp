@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Task} from '../model/taskData.interface';
 import { Subscription } from 'rxjs';
-import {TaskInfoService} from '../services/task-info.service';
+import {TaskInfoService} from '../task-info.service';
 
 @Component({
   selector: 'app-tasklist',

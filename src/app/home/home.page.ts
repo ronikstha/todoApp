@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import{Validators,FormBuilder,FormGroup} from '@angular/forms';
 
-import { TaskInfoService } from '../services/task-info.service';
+import { TaskInfoService } from '../task-info.service';
 import{Task} from '../model/taskData.interface';
 
 @Component({

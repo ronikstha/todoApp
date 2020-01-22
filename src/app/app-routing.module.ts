@@ -5,17 +5,21 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
-    path: 'abc',
-    loadChildren: () => import('./abc/abc.module').then( m => m.AbcPageModule)
+    path: '',
+    loadChildren: './tabs/tabs.module#TabsPageModule'
   },
   {
-    path: 'add-task',
-    loadChildren: () => import('./add-task/add-task.module').then( m => m.AddTaskPageModule)
+    path: 'home',
+    loadChildren: './home/home.module#HomePageModule'
   },
   {
-    path: 'view',
-    loadChildren: () => import('./view/view.module').then( m => m.ViewPageModule)
+    path: 'tasklist',
+    loadChildren: './tasklist/tasklist.module#TasklistPageModule'
   },
+  {
+    path: 'history',
+    loadChildren: './history/history.module#HistoryPageModule'
+  }
 ];
 
 @NgModule({
