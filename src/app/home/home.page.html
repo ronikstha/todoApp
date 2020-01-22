@@ -1,17 +1,51 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      My ToDo App
-    </ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-title>TO DO LIST</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+<form [formGroup]="taskForm">
   <ion-list>
-    <button ion-item *ngFor="Add Task | async" (click)="getTask(task.createDate)">
-      {{ Task.title }}
-    </button>
-  </ion-list>
-  <button ion-button (click)= "addTask()" icon-start large roond color="dark">Add Task</button> 
+    <ion-list-header>
+      Add Item To The List
+    </ion-list-header>
+    <ion-grid>
+        <ion-col>
+            <ion-item>
+              <ion-input name="id" placeholder="Enter id of task" type="text"  formControlName ="id"></ion-input>
+            </ion-item>
+          </ion-col>
+        <ion-col>
+    <ion-item>
+      <ion-input name="taskName" placeholder="Enter name of task" type="text"  formControlName ="name"></ion-input>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+      <ion-item>
+        <ion-input name="location" placeholder="Task Location" type="text" formControlName ="location"></ion-input>
+      </ion-item>
+    </ion-col>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+          <ion-input name="taskDes" placeholder="Enter Description" type="text" formControlName ="desc"></ion-input>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+          <ion-input name="category" placeholder="Enter Category" type="text" formControlName ="cat"></ion-input>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button expand="full" color="primary" (click)="addTask()" [disabled]="!taskForm.valid" >Add Task</ion-button>
   
+      
+  </ion-list>
+</form>
+
+
 </ion-content>

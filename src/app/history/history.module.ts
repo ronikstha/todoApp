@@ -4,23 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AddTaskPageRoutingModule } from './add-task-routing.module';
+import { HistoryPageRoutingModule } from './history-routing.module';
 
-import { AddTaskPage } from './add-task.page';
-
-
+import { HistoryPage } from './history.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AddTaskPageRoutingModule
+    HistoryPageRoutingModule
   ],
-  declarations: [AddTaskPage]
+  declarations: [HistoryPage]
 })
-export class AddTaskPageModule {}
-
-
-
-
+export class HistoryPageModule {}
